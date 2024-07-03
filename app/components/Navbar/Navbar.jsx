@@ -12,8 +12,8 @@ const Navbar = () => {
 <ul className="flex space-x-6">
     
 <li className=" cursor-pointer hover:text-red-700 transition-colors"><Link href="Home">Home</Link></li>
-    <li className=" cursor-pointer "><Link className='hover:text-red-700 transition-colors'  href="users">users</Link></li>
-    <li className="  cursor-pointer"><a href="">Login</a></li>
+    <li className=" cursor-pointer "><Link className='hover:text-red-700 transition-colors'  href="/Products">Products</Link></li>
+    <li className="  cursor-pointer"><Link href="/Addproduct">Add product</Link></li>
     <li className=" text-orange-500 cursor-pointer"><a href="" className="font-bold">Logout</a></li>
    </ul>
 

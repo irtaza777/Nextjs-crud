@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar"
-import Productcard from "./components/productcard"
-
+import Footer from "./components/Footer/Footer"
+import '@radix-ui/themes/styles.css';
+import { Theme } from '@radix-ui/themes';
+import Providers from "./components/Providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,9 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}> <Navbar/>        
-<main>{children}</main></body>
-     
+      <body className={inter.className}> <Providers><Navbar/>
+      <Theme accentColor="orange" radius="full">
+<main className="p-5">{children}</main>
+<Footer/>
+</Theme>
+</Providers>
+
+</body>
 
     </html>
   );
